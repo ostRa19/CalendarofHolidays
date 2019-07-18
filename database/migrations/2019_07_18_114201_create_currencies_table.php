@@ -13,10 +13,12 @@ class CreateCurrenciesTable extends Migration
      */
     public function up()
     {
+        $curDate = date('Y-m-d h:i:s', time());
+
         Schema::create('currencies', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('ccy_cash'); //cash USD
+            $table->string('ccy');
             $table->string('base_ccy');
             $table->float('buy');
             $table->float('sale');
