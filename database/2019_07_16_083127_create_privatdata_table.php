@@ -47,6 +47,6 @@ class CreatePrivatdataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('privatdata');
+       // Schema::dropIfExists('privatdata');
     }
 }
