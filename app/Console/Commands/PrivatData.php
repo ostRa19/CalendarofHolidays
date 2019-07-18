@@ -82,5 +82,6 @@ class PrivatData extends Command
         catch(Exception $e){
             echo 'Exception is thrown: ',  $e->getMessage(), "\n";
         }
+        
     }
 }    
