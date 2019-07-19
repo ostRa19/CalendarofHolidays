@@ -12,18 +12,8 @@ class CurrencyService
         $insertCommand = new Currency;
 
         for($i=0;$i<2;$i++){
-            $cash = Currency::create([
-                'ccy' => $cash_array[$i]['ccy'],
-                'base_ccy' => $cash_array[$i]['base_ccy'],
-                'buy' => $cash_array[$i]['buy'],
-                'sale' => $cash_array[$i]['sale']         
-            ]);
-            $cashless = Currency::create([
-                'ccy' => $cash_array[$i]['ccy'],
-                'base_ccy' => $cash_array[$i]['base_ccy'],
-                'buy' => $cash_array[$i]['buy'],
-                'sale' => $cash_array[$i]['sale']         
-            ]);
+            $cash = Currency::create($cash_array[$i]);
+            $cashless = Currency::create($cashless_array[$i]);
         }
     }
 }

@@ -16,4 +16,19 @@ Route::get('/', function () {
 });
 Route::post("/welcome", "CalendarContriller@store");
 
-// Route::resource('crud', 'CrudsController');
+    Route::group([
+        'prefix'
+    ], function () { 
+      
+            // get list of Currency
+    Route::get('currency','CurrencyController@index');
+    // get specific Currency
+    Route::get('currency/{id}','CurrencyController@show');
+    // create new Currency
+    Route::post('currency','CurrencyController@store');
+    // update existing Currency
+    Route::put('currency','CurrencyController@store');
+    // delete a Currency
+    Route::delete('currency/{id}','CurrencyController@destroy');
+ 
+    });
