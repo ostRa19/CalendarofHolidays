@@ -20,7 +20,7 @@ Route::post("/welcome", "CalendarContriller@store");
         'prefix'
     ], function () { 
       
-            // get list of Currency
+    // get list of Currency
     Route::get('currency','CurrencyController@index');
     // get specific Currency
     Route::get('currency/{id}','CurrencyController@show');

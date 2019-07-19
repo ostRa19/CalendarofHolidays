@@ -13,7 +13,7 @@ class CurrencyCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'command:currency';
+    protected $signature = 'currency';
 
     /**
      * The console command description.
