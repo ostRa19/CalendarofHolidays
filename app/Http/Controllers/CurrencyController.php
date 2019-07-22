@@ -28,7 +28,7 @@ class CurrencyController extends Controller
     }
     public function show(Request $request)
     {
-        $data = Currency::where('id' , '=' , $request->id)->first();
+        $data = Currency::where('id', '=', $request->id)->first();
         return response()->json([
             'message' => 'Fetching Currency!',
             'data' => $data
@@ -52,5 +52,4 @@ class CurrencyController extends Controller
             'message' => 'Currency Successfully deleted!'
         ]);
     }
- 
 }
